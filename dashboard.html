@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>EcoMinds</title>
+
+    <!-- Google Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Nunito:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+   <!-- NAVBAR -->    
+    <div class="navbar">
+    <img src="images/logo.png" alt="EcoMinds Logo" class="logo">
+    
+    <div class="nav-left">
+        <div class="logo-placeholder"></div>
+        <div class="site-text">
+            <div class="site-name">EcoMinds</div>
+            <div class="motto">Built by students, powered by climate science.</div>
+        </div>
+    </div>
+
+    <div class="nav-right">
+        <div class="dropdown">
+             <span class="dropbtn">Live Tutoring</span>
+            <div class="dropdown-content">
+                <a href="schedule.html">Schedule</a>
+                <a href="how-it-works.html">How It Works</a>
+                <a href="about-our-volunteers.html">About Our Volunteers</a>
+                <a href="volunteer-application.html">Volunteer Application</a>
+            </div>
+        </div>
+
+        <div class="dropdown">
+            <span class="dropbtn">Resources</span>
+            <div class="dropdown-content">
+                <a href="articles.html">Articles</a>
+                <a href="videos.html">Videos</a>
+                <a href="quizzes.html">Quizzes</a>
+            </div>
+        </div>
+
+        <a href="dashboard.html">Dashboard</a>
+        <a href="signup.html" class="signup">Sign Up</a>
+    </div>
+</div>
+
+        
+<!-- DONT DISTURB ANYTHING ABOVE THIS LINE-->     
+
+
+<!-- DASHBOARD TITLE -->
+<section class="dashboard-title">
+  <h1>Student Learning Dashboard</h1>
+  <p class="dashboard-caption">
+    Track progress, explore activities, and reach learning milestones
+  </p>
+</section>
+
+<div class="dashboard-layout">
+
+  <!-- SIDEBAR NAVIGATION -->
+<aside class="dashboard-sidebar">
+  <a href="#" onclick="showSection('courses')">Courses</a>
+  <a href="#" onclick="showSection('progress')">Progress</a>
+  <a href="#" onclick="showSection('activities')">Activities</a>
+</aside>
+
+
+  <!-- MAIN CONTENT -->
+  <main class="dashboard-content">
+
+    <!-- COURSES -->
+    <section id="courses" class="dash-section active">
+      <h2>Courses</h2>
+      <p>Explore available learning modules and lessons.</p>
+    </section>
+
+    <!-- PROGRESS -->
+    <section id="progress" class="dash-section">
+      <h2>Progress</h2>
+      <p>View completion status and learning growth.</p>
+    </section>
+
+    <!-- ACTIVITIES -->
+    <section id="activities" class="dash-section">
+      <h2>Activities</h2>
+      <p>Hands-on tasks and interactive learning experiences.</p>
+    </section>
+
+  </main>
+</div>
+
+<script>
+  function showSection(sectionId) {
+    document.querySelectorAll('.dash-section').forEach(section => {
+      section.classList.remove('active');
+    });
+    document.getElementById(sectionId).classList.add('active');
+  }
+</script>
+
+<section id="courses" class="dash-section active">
+
+  <div class="course">
+    <h3>Climate Science</h3>
+    <p>Introduction to Climate Change</p>
+    <hr>
+    <p>Greenhouse Gases</p>
+    <hr>
+    <p>Global Warming Effects</p>
+    <hr>
+    <p>Mitigation Strategies</p>
+    <hr>
+  </div>
+
+  <div class="course">
+    <h3>Oceans & Marine Life</h3>
+    <p>Ocean Zones</p>
+    <hr>
+    <p>Acidification</p>
+    <hr>
+    <p>Marine Biodiversity</p>
+    <hr>
+    <p>Human Impacts</p>
+    <hr>
+  </div>
+
+  <div class="course">
+    <h3>Ecosystems & Biodiversity</h3>
+    <p>Food Webs</p>
+    <hr>
+    <p>Endangered Species</p>
+    <hr>
+    <p>Keystone Species</p>
+    <hr>
+    <p>Conservation Efforts</p>
+    <hr>
+  </div>
+
+  <div class="course">
+    <h3>Renewable Energy</h3>
+    <p>Solar Power</p>
+    <hr>
+    <p>Wind Power</p>
+    <hr>
+    <p>Hydroelectric</p>
+    <hr>
+    <p>Comparisons & Benefits</p>
+    <hr>
+  </div>
+
+  <div class="course">
+    <h3>Environmental Policy</h3>
+    <p>Global Agreements</p>
+    <hr>
+    <p>National Policies</p>
+    <hr>
+    <p>Climate Justice</p>
+    <hr>
+    <p>Activism & Advocacy</p>
+    <hr>
+  </div>
+</section>
+
+
+
+
+</body>
+</html>

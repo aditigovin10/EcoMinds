@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>EcoMinds</title>
+
+    <!-- Google Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Nunito:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<!-- NAVBAR -->    
+    <div class="navbar">
+    <img src="images/logo.png" alt="EcoMinds Logo" class="logo">
+    
+    <div class="nav-left">
+        <div class="logo-placeholder"></div>
+        <div class="site-text">
+            <div class="site-name">EcoMinds</div>
+            <div class="motto">Built by students, powered by climate science.</div>
+        </div>
+    </div>
+
+    <div class="nav-right">
+        <div class="dropdown">
+             <span class="dropbtn">Live Tutoring</span>
+            <div class="dropdown-content">
+                <a href="schedule.html">Schedule</a>
+                <a href="how-it-works.html">How It Works</a>
+                <a href="about-our-volunteers.html">About Our Volunteers</a>
+                <a href="volunteer-application.html">Volunteer Application</a>
+            </div>
+        </div>
+
+        <div class="dropdown">
+            <span class="dropbtn">Resources</span>
+            <div class="dropdown-content">
+                <a href="articles.html">Articles</a>
+                <a href="videos.html">Videos</a>
+                <a href="quizzes.html">Quizzes</a>
+            </div>
+        </div>
+
+        <a href="dashboard.html">Dashboard</a>
+        <a href="signup.html" class="signup">Sign Up</a>
+    </div>
+</div>
+
+<!-- DONT DISTURB ANYTHING ABOVE THIS LINE-->     
+
+<div class="volunteer-application">
+    <h1>Volunteer Application</h1>
+    <p>Join EcoMinds and help students explore climate and environmental science!</p>
+
+    <form onsubmit="redirectVolunteerSuccess (event)">
+        <label for="name"><b>Full Name</b></label>
+        <input type="text" placeholder="Enter your name" name="name" required>
+
+        <label for="email"><b>Email</b></label>
+        <input type="text" placeholder="Enter your email" name="email" required>
+
+        <label for="grade"><b>Your Current Grade</b></label>
+<select name="grade" id="grade" required>
+    <option value="" disabled selected>Select your grade</option>
+    <option value="9">9th Grade</option>
+    <option value="10">10th Grade</option>
+    <option value="11">11th Grade</option>
+    <option value="12">12th Grade</option>
+</select>
+
+
+        <label for="experience"><b>Experience / Skills</b></label>
+        <textarea placeholder="Describe your relevant experience" name="experience" rows="4"></textarea>
+
+        <label for="availability"><b>Availability</b></label>
+        <input type="text" placeholder="Ex: Mondays & Wednesdays 4-6 PM" name="availability" required>
+
+        <div class="clearfix">
+            <button type="reset" class="cancelbtn">Clear</button>
+            <button type="submit" class="signupbtn">Submit</button>
+        </div>
+    </form>
+    <script>
+        function redirectVolunteerSuccess (e){
+            e.preventDefault();
+            window.location.href= "volunteer-app-success.html";
+        }
+    </script>
+</div>
+
+</body>
+</html>

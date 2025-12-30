@@ -1,0 +1,928 @@
+ body {
+            margin: 0;
+            font-family: 'Poppins', sans-serif;
+            background-color: #F7F9FB;
+        }
+
+        /* ===== NAVBAR ===== */
+        .navbar {
+            background-color: #ffffff;
+            padding: 16px 32px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width:100%;
+            border-bottom: 1px solid #E5E7EB;
+        }
+
+        .nav-right {
+        display: flex;
+        align-items: center;
+        gap: 28px; /* spacing between each top-level link or dropdown */
+        }
+.nav-right > *:not(:last-child) {
+    margin-right: 12px; /* spacing between links except the last one */
+}
+
+.nav-right .dropdown + .dropdown {
+    margin-right: 28px; /* extra spacing just between dropdowns */
+}
+
+
+
+        .nav-left {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+
+        /* General navbar link style */
+        
+.navbar a {
+    font-family: 'Nunito', sans-serif;
+    font-weight: 600;
+    font-size: 16px;
+    color: #1F2937;
+    text-decoration: none;
+    transition: opacity 0.2s ease, padding-left 0.2s ease;
+    position: relative;
+}
+
+/* Hover effect for normal links */
+.navbar a:hover {
+    opacity: 0.6;
+    padding-left: 6px; /* subtle interactive motion */
+}
+
+/* DROPDOWN MENU */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+/* Category label (not clickable) */
+.dropbtn {
+    font-family: 'Nunito', sans-serif;
+    font-weight: 600;
+    font-size: 16px;
+    color: #1F2937;
+    cursor: pointer;
+    display: inline-block;
+    transition: opacity 0.2s ease, padding-left 0.2s ease;
+}
+
+/* Hover effect for category label */
+.dropbtn:hover {
+    opacity: 0.6;
+    padding-left: 6px;
+}
+
+/* Dropdown panel */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    top: 100%;        
+    left: 0;
+    background-color: #FFFFFF;
+    min-width: 200px;
+    box-shadow: 0px 8px 16px rgba(0,0,0,0.12);
+    border-radius: 8px;
+    padding: 8px 0;
+    z-index: 100;
+}
+
+/* Dropdown links */
+.dropdown-content a {
+    display: block;
+    padding: 10px 18px;
+    font-family: 'Nunito', sans-serif;
+    font-weight: 500;
+    font-size: 15px;
+    color: #1F2937;
+    text-decoration: none;
+    white-space: nowrap;
+}
+
+/* Hover state inside dropdown */
+.dropdown-content a:hover {
+    background-color: #E6F2EE;
+    color: #1B5E4B;
+}
+
+/* Show dropdown on hover */
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* Small arrow indicator */
+.dropbtn::after {
+    content: '▾';
+    font-size: 12px;
+    margin-left: 6px;
+    color: #1F2937;
+}
+
+
+        /* Logo image styling */
+.logo {
+    width: 70px;       
+    height: 70px;      
+    border-radius: 50%;
+    object-fit: cover;  
+    margin-right: 10px; 
+    filter: drop-shadow(0 3px 7px rgba(0, 0, 0, 0.3));
+}
+
+
+        .site-text {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .site-name {
+            font-size: 32px;
+            text-decoration: none;
+            font-family: "poppins", sans-serif;
+            font-weight: 700;
+            color: #1F2937;
+            line-height: 1.1;
+            position: relative;
+            z-index: 10;
+        }
+.site-name:visited,
+.site-name:hover {
+    opacity: 0.85;
+}
+.site-name:active {
+  text-decoration: none;
+  color: #1f293751;
+}
+
+
+        .motto {
+            font-size: 12px;
+            font-family: "nunito", sans-serif;
+            font-weight: 500;
+            color: #6B7280;
+        }
+
+        .nav-right a {
+            color: #1F2937;
+            text-decoration: none;
+            font-family: "nunito", sans-serif;
+            font-weight: 500;
+            margin-left: 22px;
+            font-size: 15px;
+        }
+
+        /* ===== SIGN UP SCRIBBLE ===== */
+        .signup {
+            color: #1F2937;
+            position: relative;
+            font-weight: 600;
+            padding: 26px 34px;
+            background-image: url("images/Scribble.png");
+            background-size: 95% 110%;
+            background-repeat: no-repeat;
+            background-position: 70% 84%;
+        }
+
+        /* ===== HERO ===== */
+        .hero {
+            padding: 70px 10%;
+            display: flex;
+            align-items: center;
+            gap: 60px;
+        }
+        .hero-text h1 {
+            font-family: 'poppins', sans-serif;
+            font-size: 48px;
+            color: #1F2937;
+            margin-bottom: 20px;
+        }
+
+        .hero-text h2 {
+            font-family: 'poppins', sans-serif;
+            font-size: 48px;
+            color: #1F2937;
+            margin-bottom: 20px;
+        }
+
+        .hero-text p {
+            font-size: 18px;
+            font-family:"nunito", sans-serif;
+            max-width: 520px;
+            color:#6B7280
+        }
+
+        /* ===== IMAGE STACK ===== */
+        .image-stack {
+            position: relative;
+            width: 340px;
+            height: 320px;
+            flex-shrink: 0;
+        }
+
+        .image-stack img {
+            width: 220px;
+            height: 220px;
+            border-radius: 50%;
+            object-fit: cover;
+            position: absolute;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+        }
+
+        .image-stack img:nth-child(1) {
+            top: 0;
+            left: 0;
+            z-index: 2;
+        }
+
+        .image-stack img:nth-child(2) {
+            top: 100px;
+            left: 120px;
+            z-index: 1;
+        }
+
+
+ /* Schedule Page- STYLE */
+.schedule-page {
+    font-family: 'Nunito', sans-serif;
+    text-align: center;
+    padding: 50px 20px;
+    position: relative;
+    min-height: 100vh;
+    overflow: hidden;
+    background-color: #f7f9fb;
+}
+
+/* ANIMATED OCEAN BG- STYLE */
+/* ===== SCHEDULE PAGE LAYOUT ===== */
+.schedule-page {
+  position: relative;
+  min-height: 100vh;
+  overflow: hidden;
+  background-color: #F7F9FB;
+}
+
+/* ===== OCEAN BACKGROUND ===== */
+.ocean-bg {
+  position: fixed; /* stays in the background and fills viewport */
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh; /* full viewport height */
+  background-image: url("images/ocean-bg.gif");
+  background-size: cover; /* fills entire area without repeating */
+  background-position: center center;
+  opacity: 0.52;
+  filter: saturate(1.25) brightness(1.05);
+  z-index: 0;
+  pointer-events: none;
+}
+
+/* ===== FOREGROUND CONTENT ===== */
+.schedule-content {
+  position: relative;
+  z-index: 1;
+  padding: 80px 10%;
+}
+
+.schedule-content h1 {
+  font-family: 'Poppins', sans-serif;
+  font-size: 42px;
+  color: #1F2937;
+  margin-bottom: 40px;
+}
+
+/* ===== CARD GRID ===== */
+.schedule-cards {
+  display: flex;
+  flex:row;
+  width:100%;
+  padding-bottom: 50px;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 28px;
+  position: relative;
+  z-index: 1; /* makes sure it’s above the ocean */
+}
+
+
+/* ===== FLOATING CARD STYLE ===== */
+.schedule-card {
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 18px;
+  padding: 22px;
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.08);
+  font-family: 'Nunito', sans-serif;
+  animation: float 3.5s ease-in-out infinite;
+  will-change: transform;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.schedule-card:hover {
+  transform: translateY(-18px) scale(1.03);
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.18);
+}
+
+
+/* Stagger motion */
+.schedule-card:nth-child(2) { animation-delay: 0.6s; }
+.schedule-card:nth-child(3) { animation-delay: 1.2s; }
+.schedule-card:nth-child(4) { animation-delay: 1.8s; }
+.schedule-card:nth-child(5) { animation-delay: 2.4s; }
+
+/* ===== TEXT INSIDE CARDS ===== */
+.schedule-card h3 {
+  font-family: 'Poppins', sans-serif;
+  font-size: 18px;
+  margin-bottom: 10px;
+  color: #17613b;
+}
+
+.schedule-card p {
+  font-size: 14px;
+  color: #374151;
+  margin: 6px 0;
+}
+
+/* ===== FLOAT ANIMATION ===== */
+@keyframes float {
+  0%   { transform: translateY(0px); }
+  50%  { transform: translateY(-18px); }
+  100% { transform: translateY(0px); }
+}
+
+/* ===== FOOTER NOTE ===== */
+.footer-note {
+  margin-top: 40px;
+  font-size: 13px;
+  font-family: 'Nunito', sans-serif;
+  color: #6B7280;
+  opacity: 0.85;
+}
+
+
+
+
+         /* ===== STAR - RESOURCES STYLES===== */
+
+        .star-text h1 {
+            font-family: 'poppins', sans-serif;
+            font-size: 48px;
+            color: #17613b;
+            margin-bottom: 20px;
+        }
+
+ .video-wrapper {
+  width: 15%;        /* this controls the video width */
+  max-width: 800px;
+  aspect-ratio: 16 / 9;
+}
+
+.video-wrapper iframe {
+  width: 100%;
+  height: 100%;
+}
+/*==== QUIZ-RESOURCES STYLE ==== */
+
+.quiz-section {
+  background-color: #f4f9f7;
+  border-radius: 12px;
+  padding: 24px;
+  margin-top: 40px;
+  width: 100%; 
+  height:50%;         /* make sure it takes full width of container */
+  box-sizing: border-box; /* include padding in width */
+}
+
+.quiz-section h3 {
+  margin-bottom: 10px;
+  color: #1b5e20;
+}
+
+.quiz-intro {
+  font-size: 12px;
+  color: #444;
+  margin-bottom: 20px;
+}
+
+.quiz-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 100%;
+}
+
+.quiz-question {
+  background-color: #ffffff;
+  border-radius: 10px;
+  padding: 6px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+  width:100%;
+}
+
+.quiz-question p {
+  font-weight: 600;
+  margin-bottom: 10px;
+    font-size: 12px;
+}
+
+.quiz-question label {
+  display: block;
+  margin-bottom: 6px;
+  cursor: pointer;
+  font-size: 12px;
+}
+
+.quiz-question input {
+  margin-right: 8px;
+}
+
+.quiz-submit {
+  margin-top: 10px;
+  padding: 10px;
+  border: none;
+  border-radius: 8px;
+  background-color: #2e7d32;
+  color: white;
+  font-size: 12px;
+  cursor: pointer;
+}
+
+.quiz-submit:hover {
+  background-color: #1b5e20;
+}
+.topic-section {
+  width: 95%;           /* almost full page width */
+  max-width: 1000px;    /* prevents it from getting too wide on big screens */
+  margin: 0 auto;       /* centers it */
+  padding: 20px;        /* spacing inside */
+}
+.quiz-section .video-wrapper iframe {
+  width: 100%;
+  height: 400px; /* or use aspect ratio trick if you want responsive */
+  border-radius: 12px;
+}
+
+/* ===== DASHBOARD STYLE ===== */
+.dashboard-title {
+  margin-bottom: 24px;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700;
+color: #1F2937;
+font-size: 28px; /* consistent with headers elsewhere */
+}
+
+.dashboard-caption {
+  font-family: 'Nunito', sans-serif;
+  font-weight: 400;
+  font-size: 15px;
+  color: #6B7280; /* secondary gray */
+  line-height: 1.5;
+}
+
+
+.dashboard-layout {
+  display: flex;
+  gap: 24px;
+}
+
+.dashboard-sidebar {
+  width: 220px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  font-family: "nunito", sans-serif;
+}
+
+.dashboard-sidebar a {
+  text-decoration: none;
+  font-family: 'Nunito', sans-serif;
+  color: #1F2937; /* main charcoal color */
+  font-weight: 600;
+  font-size: 16px;
+  transition: opacity 0.2s ease, padding-left 0.2s ease;
+}
+
+.dashboard-sidebar a:hover {
+ opacity: 0.6;     /*lighter, transparent effect*/
+ padding-left: 6px;     /*subtle motion=interactive feeling being displayed*/
+}
+
+.dashboard-content {
+  flex: 1;
+}
+
+.dash-section {
+  display: none;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.dash-section.active {
+  display: block;
+  opacity:1;
+}
+.course {
+  margin-bottom: 24px; /* space between courses */
+}
+
+.course h3 {
+  font-family: 'Poppins', sans-serif; /* headings use Poppins */
+  font-weight: 600;
+  margin-bottom: 8px;
+  color: #27AE60; /* Ecominds success/progress green */
+}
+
+.course p {
+  font-family: 'Nunito', sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  margin: 6px 0;
+  color: #6B7280;
+  line-height: 1.5;
+}
+
+.course hr {
+  border: 0;
+  height: 1px;
+  background-color: #E5E7EB;
+  margin: 6px 0;
+}
+
+
+
+
+
+/* ===== SIGN UP STYLE ===== */
+body {
+    font-family: "Nunito", sans-serif;
+    margin: 0; 
+    min-height: 100vh;
+    background-color: #F7F9FB; /* matches your site bg */
+}
+
+.sign-up-wrapper {
+  display: grid;
+  place-items: center;
+  min-height: 100vh;
+}
+
+.sign-up {
+    margin: 5rem auto;
+    width: 40rem;
+    background-color: #ffffff; /* form bg */
+    border-radius: 18px; /* rounded corners */
+    box-shadow: 0 8px 20px rgba(0,0,0,0.08); /* soft shadow */
+    padding: 2rem;
+}
+.sign-up h1 {
+    font-family: 'Poppins', sans-serif;
+    color: #1F2937; /* navy-ish color we used before */
+    font-size: 32px;
+    margin-bottom: 10px;
+}
+
+.sign-up p, .sign-up label {
+    font-family: 'Nunito', sans-serif;
+    color: #374151; /* dark grey for readability */
+    font-size: 14px;
+}
+
+* { box-sizing: border-box; }
+
+/* Full-width input fields */
+input[type=text], input[type=password] {
+    width: 100%;
+    padding: 15px;
+    margin: 10px 0 20px 0;
+    display: inline-block;
+    border: none;
+    border-radius: 10px;
+    background: #F1F9F4; /* soft greenish-white */
+    font-family: "Nunito", sans-serif;
+    font-size: 14px;
+}
+
+input[type=text]:focus, input[type=password]:focus {
+    background-color: #E6F2EE; /* light highlight on focus */
+    outline: none;
+}
+
+/* Horizontal line */
+hr {
+    border: 1px solid #E5E7EB;
+    margin-bottom: 25px;
+}
+
+/* Buttons */
+button {
+    border: none;
+    border-radius: 0px;
+    padding: 8px 20px;
+    font-family: "Nunito", sans-serif;
+    font-size: 15px;
+    cursor: pointer;
+    width: 100%;
+    opacity: 0.95;
+    transition: all 0.2s ease;
+}
+
+.signupbtn {
+    background-color: #2E7D32; 
+    color: #ffffff;
+    margin-right: 5px;
+}
+
+.signupbtn:hover {
+    background-color: #1B5E20;
+}
+
+.cancelbtn {
+    background-color: #8FC6A0; 
+    color: #ffffff;
+    margin-left: 5px;
+}
+
+.cancelbtn:hover {
+    background-color: #6FAF87; 
+}
+
+/* Buttons side by side */
+.cancelbtn, .signupbtn {
+    float: left;
+    width: 49%; 
+}
+
+/* Container padding */
+.container {
+    padding: 0 16px;
+    font-family: "poppins", sans-serif;
+}
+
+/* Clear floats */
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+/* Responsive */
+@media screen and (max-width: 500px) {
+    .cancelbtn, .signupbtn {
+        width: 100%;
+        float: none;
+        margin: 5px 0;
+    }
+}
+
+
+/* ==== SIGNUP-SUCCESS STYLE ==== */
+
+.success-page {
+    display: flex;               
+    flex-direction: column;       
+    justify-content: center;     
+    align-items: center;         
+    min-height: 80vh;            
+    text-align: center;           
+    padding: 20px;
+    font-family: 'Nunito', sans-serif;
+}
+.success-page h1 {
+    font-family: 'Poppins', sans-serif;
+    color: #1F2937;              
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+.success-page p {
+    font-size: 16px;
+    color: #374151;
+    margin: 10px 0;
+}
+.success-btn {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #2E7D32;
+    color: #ffffff;
+    text-decoration: none;
+    border-radius: 8px;
+}
+.success-btn:hover {
+    background-color: #1B5E20;
+}
+
+
+        /* ===== RESPONSIVE FIX ===== */
+        @media (max-width: 900px) {
+            .hero {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .image-stack {
+                height: auto;
+            }
+
+            .image-stack img {
+                position: relative;
+                left: 0;
+                top: 0;
+                margin: 10px auto;
+                display: block;
+            }
+        }
+
+        .circle-img {
+    width: 25rem;      
+    height: 25rem;      
+    border-radius: 50%;  
+    object-fit: cover;   
+}
+.tutoring_how
+{
+    display: flex;
+    flex-direction: column;
+}
+.volunteer_profile{
+    display: flex;
+    flex-direction: row;
+    margin:10rem;
+    font-family: "Nunito", sans-serif;
+}
+.card {
+    width: 250px;               
+    background-color: #ffffff;  
+    border-radius: 15px;      
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2); 
+    overflow: hidden;          
+    text-align: center;         
+    font-family: 'Poppins', sans-serif;
+    margin: 20px;              
+}
+
+.card-img {
+    width: 10rem;
+    height: 10rem;
+    border-radius: 50%;        
+    object-fit: cover;         
+    margin-top: 15px;
+}
+
+
+.card-details h2 {
+    margin: 10px 0 5px 0;
+    font-size: 22px;
+    color: #6B7280;
+    font-weight: 700;
+}
+
+.card-details p {
+    margin: 5px 0;
+    font-size: 14px;
+    color: #000000;
+}
+
+/* ===== VOLUNTEER APPLICATION PAGE ===== */
+.volunteer-application {
+    margin: 5rem auto;
+    width: 40rem;
+    background-color: #ffffff; /* same as signup bg */
+    border-radius: 18px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+    padding: 2rem;
+    font-family: 'Nunito', sans-serif;
+    text-align: left;
+}
+
+/* Page heading */
+.volunteer-application h1 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 36px;
+    color: #1F2937; /* your theme navy */
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+/* Intro paragraph */
+.volunteer-application p {
+    font-size: 14px;
+    color: #374151;
+    margin-bottom: 25px;
+    text-align: center;
+}
+
+/* Full-width input fields and textarea */
+.volunteer-application input[type=text],
+.volunteer-application textarea {
+    width: 100%;
+    padding: 12px 15px;
+    margin: 10px 0 20px 0;
+    border: none;
+    border-radius: 10px;
+    background-color: #F1F9F4;
+    font-family: 'Nunito', sans-serif;
+    font-size: 14px;
+    resize: vertical; /* allow textarea resizing vertically */
+}
+/* Placeholder text styling */
+.volunteer-application input[type=text]::placeholder,
+.volunteer-application textarea::placeholder {
+    color: #6B7280; /* soft grey matching your theme */
+    font-family: 'Nunito', sans-serif;
+    font-size: 14px;
+    opacity: 1; /* ensures the color isn’t too faded */
+}
+
+
+.volunteer-application input[type=text]:focus,
+.volunteer-application textarea:focus {
+    background-color: #E6F2EE;
+    outline: none;
+}
+
+/* Buttons */
+.volunteer-application button {
+    border: none;
+    border-radius: 4px;
+    padding: 8px 20px;
+    font-family: "Nunito", sans-serif;
+    font-size: 15px;
+    width:48%;
+    cursor: pointer;
+    opacity: 0.95;
+    transition: all 0.2s ease;
+}
+
+/* Submit button green */
+.volunteer-application .signupbtn {
+    background-color: #2E7D32; 
+    color: #ffffff;
+    margin-left: 4%;
+}
+
+.volunteer-application .signupbtn:hover {
+    background-color: #1B5E20;
+}
+
+
+/* Clear button soft green */
+.volunteer-application .cancelbtn {
+    background-color: #8FC6A0; 
+    color: #ffffff;
+}
+
+.volunteer-application select {
+    width: 100%;
+    padding: 12px 15px;
+    margin: 10px 0 20px 0;
+    border: none;
+    border-radius: 10px;
+    background-color: #F1F9F4;
+    font-family: 'Nunito', sans-serif;
+    font-size: 14px;
+}
+.volunteer-application select:focus {
+    background-color: #E6F2EE;
+    outline: none;
+}
+
+
+.volunteer-application .cancelbtn:hover {
+    background-color: #6FAF87;
+}
+
+/* Buttons container */
+.volunteer-application .clearfix{
+  display: flex;
+  gap: 4%;
+  justify-content: space-between;
+}
+
+/* Individual Buttons */
+.volunteer-application .cancelbtn,
+.volunteer-application .signupbtn {
+    float: none;
+    width: 48%;
+}
+
+/* Clear floats */
+.volunteer-application .clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+/* Responsive adjustments */
+@media screen and (max-width: 500px) {
+    .volunteer-application .cancelbtn,
+    .volunteer-application .signupbtn {
+        width: 100%;
+        float: none;
+        margin: 5px 0;
+    }
+}
+
+
+
