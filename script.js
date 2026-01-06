@@ -28,13 +28,16 @@ function checkQuiz(formId, resultId) {
 //* DASHBOARD JS *//
 
 function showSection(sectionId) {
-  document.querySelectorAll(".dash-section").forEach(section => {
-    section.classList.remove("active");
+  // hide all sections
+  document.querySelectorAll('.dash-section').forEach(section => {
+    section.classList.remove('active');
   });
-  const section = document.getElementById(sectionId);
-  section.classList.add("active");
-  section.scrollIntoView({ behavior: "smooth" });
+  
+  // show the clicked section
+  document.getElementById(sectionId).classList.add('active');
 }
+
+
 
 
 

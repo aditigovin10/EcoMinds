@@ -64,108 +64,105 @@
 
   <!-- SIDEBAR NAVIGATION -->
 <aside class="dashboard-sidebar">
-  <a href="#" onclick="showSection('courses')">Courses</a>
-  <a href="#" onclick="showSection('progress')">Progress</a>
-  <a href="#" onclick="showSection('activities')">Activities</a>
+  <a href="#" onclick="showSection('courses'); return false;">Courses</a>
+<a href="#" onclick="showSection('progress'); return false;">Progress</a>
+<a href="#" onclick="showSection('activities'); return false;">Activities</a>
+
 </aside>
 
 
   <!-- MAIN CONTENT -->
   <main class="dashboard-content">
 
-    <!-- COURSES -->
-    <section id="courses" class="dash-section active">
-      <h2>Courses</h2>
-      <p>Explore available learning modules and lessons.</p>
-    </section>
+      <!-- COURSES -->
+  <section id="courses" class="dash-section ">
+    <h2>Courses</h2>
+    <p>Explore available learning modules and lessons.</p>
 
-    <!-- PROGRESS -->
-    <section id="progress" class="dash-section">
-      <h2>Progress</h2>
-      <p>View completion status and learning growth.</p>
-    </section>
+    <div class="course">
+      <h3>Climate Science</h3>
+      <p>Introduction to Climate Change</p>
+      <hr>
+      <p>Greenhouse Gases</p>
+      <hr>
+      <p>Global Warming Effects</p>
+      <hr>
+      <p>Mitigation Strategies</p>
+      <hr>
+    </div>
 
-    <!-- ACTIVITIES -->
-    <section id="activities" class="dash-section">
-      <h2>Activities</h2>
-      <p>Hands-on tasks and interactive learning experiences.</p>
-    </section>
+    <div class="course">
+      <h3>Oceans & Marine Life</h3>
+      <p>Ocean Zones</p>
+      <hr>
+      <p>Acidification</p>
+      <hr>
+      <p>Marine Biodiversity</p>
+      <hr>
+      <p>Human Impacts</p>
+      <hr>
+    </div>
 
-  </main>
+    <div class="course">
+      <h3>Ecosystems & Biodiversity</h3>
+      <p>Food Webs</p>
+      <hr>
+      <p>Endangered Species</p>
+      <hr>
+      <p>Keystone Species</p>
+      <hr>
+      <p>Conservation Efforts</p>
+      <hr>
+    </div>
+
+    <div class="course">
+      <h3>Renewable Energy</h3>
+      <p>Solar Power</p>
+      <hr>
+      <p>Wind Power</p>
+      <hr>
+      <p>Hydroelectric</p>
+      <hr>
+      <p>Comparisons & Benefits</p>
+      <hr>
+    </div>
+
+    <div class="course">
+      <h3>Environmental Policy</h3>
+      <p>Global Agreements</p>
+      <hr>
+      <p>National Policies</p>
+      <hr>
+      <p>Climate Justice</p>
+      <hr>
+      <p>Activism & Advocacy</p>
+      <hr>
+    </div>
+  </section>
+
+  <!-- PROGRESS -->
+  <section id="progress" class="dash-section">
+    <h2>Progress</h2>
+    <p>View completion status and learning growth.</p>
+  </section>
+
+  <!-- ACTIVITIES -->
+  <section id="activities" class="dash-section">
+    <h2>Activities</h2>
+    <p>Hands-on tasks and interactive learning experiences.</p>
+  </section>
+
+</main>
+
+ 
 </div>
 
-<script>
-  function showSection(sectionId) {
-    document.querySelectorAll('.dash-section').forEach(section => {
-      section.classList.remove('active');
-    });
-    document.getElementById(sectionId).classList.add('active');
-  }
-</script>
 
-<section id="courses" class="dash-section active">
 
-  <div class="course">
-    <h3>Climate Science</h3>
-    <p>Introduction to Climate Change</p>
-    <hr>
-    <p>Greenhouse Gases</p>
-    <hr>
-    <p>Global Warming Effects</p>
-    <hr>
-    <p>Mitigation Strategies</p>
-    <hr>
-  </div>
+<script src="script.js"></script>
 
-  <div class="course">
-    <h3>Oceans & Marine Life</h3>
-    <p>Ocean Zones</p>
-    <hr>
-    <p>Acidification</p>
-    <hr>
-    <p>Marine Biodiversity</p>
-    <hr>
-    <p>Human Impacts</p>
-    <hr>
-  </div>
 
-  <div class="course">
-    <h3>Ecosystems & Biodiversity</h3>
-    <p>Food Webs</p>
-    <hr>
-    <p>Endangered Species</p>
-    <hr>
-    <p>Keystone Species</p>
-    <hr>
-    <p>Conservation Efforts</p>
-    <hr>
-  </div>
-
-  <div class="course">
-    <h3>Renewable Energy</h3>
-    <p>Solar Power</p>
-    <hr>
-    <p>Wind Power</p>
-    <hr>
-    <p>Hydroelectric</p>
-    <hr>
-    <p>Comparisons & Benefits</p>
-    <hr>
-  </div>
-
-  <div class="course">
-    <h3>Environmental Policy</h3>
-    <p>Global Agreements</p>
-    <hr>
-    <p>National Policies</p>
-    <hr>
-    <p>Climate Justice</p>
-    <hr>
-    <p>Activism & Advocacy</p>
-    <hr>
-  </div>
-</section>
-
+</body>
 
 
 
