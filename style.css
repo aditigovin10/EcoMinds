@@ -244,6 +244,29 @@
             z-index: 1;
         }
 
+.volunteer-btn {
+    display: inline-block;
+    margin-top: 24px;
+
+    background-color: #1F2937; 
+    color: #ffffff;
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+
+    padding: 14px 28px;
+    border-radius: 999px; 
+    text-decoration: none;
+
+    box-shadow: 0 8px 20px rgba(31, 41, 55, 0.25);
+    transition: all 0.25s ease;
+}
+
+.volunteer-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 12px 28px rgba(31, 41, 55, 0.35);
+    background-color: #111827; /* slightly darker navy */
+}
 
  /* Schedule Page- STYLE */
 .schedule-page {
@@ -364,6 +387,76 @@
 
 
 
+/*==== ARTICLES-RESOURCES STYLE ==== */
+
+
+.articles-page {
+    max-width: 1100px;
+    margin: 5rem auto;
+    padding: 0 2rem;
+    text-align: center;
+}
+
+
+.articles-page h1 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 36px;
+    color: #1F2937;
+    margin-bottom: 10px;
+}
+
+
+.articles-subtext {
+    font-family: 'Nunito', sans-serif;
+    font-size: 16px;
+    color: #4B5563;
+    margin-bottom: 50px;
+}
+
+
+.articles-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 24px;
+}
+
+
+.article-card {
+    background: #ffffff;
+    border-radius: 18px;
+    padding: 24px 20px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+    text-align: left;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+
+.article-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 14px 30px rgba(0, 0, 0, 0.12);
+}
+
+
+.article-card a {
+    font-family: 'Poppins', sans-serif;
+    font-size: 18px;
+    color: #1F2937;
+    text-decoration: none;
+    display: block;
+    margin-bottom: 8px;
+}
+
+
+.article-card a:hover {
+    text-decoration: underline;
+}
+
+
+.article-card span {
+    font-family: 'Nunito', sans-serif;
+    font-size: 13px;
+    color: #6B7280;
+}
 
          /* ===== STAR - RESOURCES STYLES===== */
 
@@ -374,16 +467,93 @@
             margin-bottom: 20px;
         }
 
- .video-wrapper {
-  width: 15%;        /* this controls the video width */
-  max-width: 800px;
-  aspect-ratio: 16 / 9;
+/*==== VIDEOS-RESOURCES STYLE ==== */
+
+
+.videos-page {
+  max-width: 1100px;
+  margin: 5rem auto;
+  padding: 2rem;
+  text-align: center;
 }
 
+
+.videos-page h1 {
+  font-family: 'Poppins', sans-serif;
+  font-size: 36px;
+  color: #1F2937;
+  margin-bottom: 10px;
+}
+
+
+.videos-subtext {
+  font-family: 'Nunito', sans-serif;
+  color: #374151;
+  margin-bottom: 3rem;
+}
+
+
+/* Grid layout */
+.videos-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 2rem;
+}
+
+
+.video-card {
+  background: #FFFFFF;
+  border-radius: 20px;
+  padding: 1.5rem;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+  text-align: left;
+  transition: transform 0.25s ease;
+}
+
+
+.video-card:hover {
+  transform: translateY(-6px);
+}
+
+
+.video-tag {
+  display: inline-block;
+  background: #E5F0FF;
+  color: #1F2937;
+  font-size: 12px;
+  padding: 4px 10px;
+  border-radius: 999px;
+  margin-bottom: 8px;
+  font-family: 'Nunito', sans-serif;
+}
+
+
+.video-card h3 {
+  font-family: 'Poppins', sans-serif;
+  font-size: 18px;
+  margin-bottom: 12px;
+  color: #1F2937;
+}
+
+
+.video-wrapper {
+  position: relative;
+  padding-top: 56.25%;
+  border-radius: 14px;
+  overflow: hidden;
+  margin-top: 10px;
+}
+
+
 .video-wrapper iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
   width: 100%;
   height: 100%;
+  border-radius: 14px;
 }
+
 /*==== QUIZ-RESOURCES STYLE ==== */
 
 .quiz-section {
@@ -740,11 +910,87 @@ button {
     border-radius: 50%;  
     object-fit: cover;   
 }
-.tutoring_how
-{
-    display: flex;
-    flex-direction: column;
+
+/* Tutoring How & FAQ STYLE */
+
+
+.tutoring_how h2,
+.faq-section h2 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 32px;
+    color: #1F2937; 
+    margin-bottom: 40px;
 }
+
+/* ===== FAQ SECTION ===== */
+.faq-section {
+    max-width: 900px;
+    margin: 5rem auto;
+    padding: 2rem;
+    text-align: center;
+    font-family: 'Nunito', sans-serif;
+}
+/* Individual FAQ cards */
+.faq-card {
+    background-color: #FFFFFF;
+    border-radius: 16px;
+    padding: 1.5rem 2rem;
+    margin-bottom: 20px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+    text-align: left;
+}
+
+/* Question */
+.faq-card h3 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 18px;
+    color: #1F2937;
+    margin-bottom: 8px;
+}
+
+/* Answer */
+.faq-card p {
+    font-size: 14px;
+    color: #374151;
+    margin: 0;
+}
+
+.faq-card {
+    transition: transform 0.2s ease;
+}
+
+.faq-card:hover {
+    transform: translateY(-4px);
+}
+
+.tutoring_how img {
+    width: 260px;
+    height: 260px;
+    object-fit: cover;
+    border-radius: 18px; 
+    display: block;
+    margin: 0 auto 30px auto; /* centered */
+    margin-bottom: 30px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.12);
+    transition: transform 0.3s ease;
+}
+
+.tutoring_how img:hover {
+    transform: scale(1.03);
+}
+
+.tutoring_how p {
+    font-size: 15px;
+    color: #374151;
+    line-height: 1.6;
+    margin-bottom: 14px;
+}
+
+.tutoring_how strong {
+    color: #2E7D32;
+}
+
+
 .volunteer_profile{
     display: flex;
     flex-direction: row;
