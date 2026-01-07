@@ -458,14 +458,7 @@
     color: #6B7280;
 }
 
-         /* ===== STAR - RESOURCES STYLES===== */
 
-        .star-text h1 {
-            font-family: 'poppins', sans-serif;
-            font-size: 48px;
-            color: #17613b;
-            margin-bottom: 20px;
-        }
 
 /*==== VIDEOS-RESOURCES STYLE ==== */
 
@@ -556,155 +549,221 @@
 
 /*==== QUIZ-RESOURCES STYLE ==== */
 
+.quizzes-page {
+    max-width: 1000px;
+    margin: 6rem auto;       
+    padding: 0 20px;
+    font-family: 'Nunito', sans-serif;
+}
+
+.quizzes-page h1 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 42px;
+    color: #1F2937;          
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.quizzes-intro {
+    text-align: center;
+    font-size: 16px;
+    color: #4B5563;
+    margin-bottom: 50px;
+}
+
+.topic-section {
+    width: 100%;
+    margin-bottom: 40px;    
+}
+
 .quiz-section {
-  background-color: #f4f9f7;
-  border-radius: 12px;
-  padding: 24px;
-  margin-top: 40px;
-  width: 100%; 
-  height:50%;         /* make sure it takes full width of container */
-  box-sizing: border-box; /* include padding in width */
+    background-color: #f4f9f7;
+    border-radius: 12px;
+    padding: 24px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
 }
 
 .quiz-section h3 {
-  margin-bottom: 10px;
-  color: #1b5e20;
+    font-size: 24px;
+    color: #2e7d32;          
+    margin-bottom: 10px;
 }
 
-.quiz-intro {
-  font-size: 12px;
-  color: #444;
-  margin-bottom: 20px;
-}
-
-.quiz-form {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-  width: 100%;
+.quiz-section .quiz-intro {
+    font-size: 14px;
+    color: #444;
+    margin-bottom: 20px;
 }
 
 .quiz-question {
-  background-color: #ffffff;
-  border-radius: 10px;
-  padding: 6px;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
-  width:100%;
+    background-color: #ffffff;
+    border-radius: 10px;
+    padding: 12px;
+    margin-bottom: 12px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.08);
 }
 
 .quiz-question p {
-  font-weight: 600;
-  margin-bottom: 10px;
-    font-size: 12px;
+    font-weight: 600;
+    margin-bottom: 8px;
+    font-size: 14px;
 }
 
 .quiz-question label {
-  display: block;
-  margin-bottom: 6px;
-  cursor: pointer;
-  font-size: 12px;
-}
-
-.quiz-question input {
-  margin-right: 8px;
+    display: block;
+    margin-bottom: 6px;
+    cursor: pointer;
+    font-size: 14px;
 }
 
 .quiz-submit {
-  margin-top: 10px;
-  padding: 10px;
-  border: none;
-  border-radius: 8px;
-  background-color: #2e7d32;
-  color: white;
-  font-size: 12px;
-  cursor: pointer;
+    margin-top: 12px;
+    padding: 10px 14px;
+    border: none;
+    border-radius: 8px;
+    background-color: #2e7d32;
+    color: white;
+    font-size: 14px;
+    cursor: pointer;
 }
 
 .quiz-submit:hover {
-  background-color: #1b5e20;
+    background-color: #1b5e20;
 }
-.topic-section {
-  width: 95%;           /* almost full page width */
-  max-width: 1000px;    /* prevents it from getting too wide on big screens */
-  margin: 0 auto;       /* centers it */
-  padding: 20px;        /* spacing inside */
+
+.quiz-result {
+    margin-top: 12px;
+    font-weight: 600;
+    color: #1F2937;
 }
-.quiz-section .video-wrapper iframe {
-  width: 100%;
-  height: 400px; /* or use aspect ratio trick if you want responsive */
-  border-radius: 12px;
-}
+
 
 /* ===== DASHBOARD STYLE ===== */
+
+/* ===== DASHBOARD HEADER ===== */
 .dashboard-title {
-  margin-bottom: 24px;
   font-family: 'Poppins', sans-serif;
   font-weight: 700;
-color: #1F2937;
-font-size: 28px; /* consistent with headers elsewhere */
+  color: #1F2937;
+  margin-top: 80px;       /* space from nav bar */
+  margin-bottom: 40px;    /* space below header */
+  padding-left: 40px;     /* space from left edge */
+  padding-right: 20px;
 }
 
-.dashboard-caption {
+.welcome-header {
+  display: flex;           /* emoji + text side by side */
+  align-items: flex-start; /* top-align emoji with header */
+  gap: 20px;               /* space between emoji and text */
+}
+
+.profile-emoji {
+  font-size: 50px;         /* same size as header for mock profile */
+  line-height: 1;
+  flex-shrink: 0;
+}
+
+.welcome-text {
+  display: flex;
+  flex-direction: column;  /* stack header and subtext vertically */
+}
+
+.welcome-text h1 {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700;
+  font-size: 48px;         
+  color: #1F2937;
+  text-align: left;
+  margin: 0 0 10px 0;      /* space below header */
+}
+
+.welcome-text .dashboard-caption {
   font-family: 'Nunito', sans-serif;
-  font-weight: 400;
-  font-size: 15px;
-  color: #6B7280; /* secondary gray */
-  line-height: 1.5;
+  font-weight: 500;
+  font-size: 18px;        
+  color: #6B7280;
+  text-align: left;
+  margin: 0;   
 }
 
+/* optional real profile image placeholder */
+.profile-icon {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  margin-right: 20px;
+  object-fit: cover;
+  flex-shrink: 0;
+}
 
+/* ===== DASHBOARD LAYOUT ===== */
 .dashboard-layout {
   display: flex;
   gap: 24px;
+  padding: 20px;
 }
 
+/* Sidebar */
 .dashboard-sidebar {
   width: 220px;
-  height: 100%;
   display: flex;
   flex-direction: column;
-  gap: 16px;
-  font-family: "nunito", sans-serif;
+  gap: 24px;
+  font-family: 'Nunito', sans-serif;
+  background-color: #f0f4f8;
+  padding: 30px 20px;
+  border-radius: 12px;
+  box-shadow: 2px 0 8px rgba(0,0,0,0.05);
+  height: fit-content;
 }
 
 .dashboard-sidebar a {
   text-decoration: none;
   font-family: 'Nunito', sans-serif;
-  color: #1F2937; /* main charcoal color */
+  color: #1F2937;
   font-weight: 600;
-  font-size: 16px;
-  transition: opacity 0.2s ease, padding-left 0.2s ease;
+  font-size: 18px;
+  padding: 12px 16px;      
+  border-radius: 10px;
+  transition: all 0.2s ease;
+  display: block;
 }
 
 .dashboard-sidebar a:hover {
- opacity: 0.6;     /*lighter, transparent effect*/
- padding-left: 6px;     /*subtle motion=interactive feeling being displayed*/
+  background-color: #dbeafe;
+  color: #1e40af;
 }
 
+/* Main Content */
 .dashboard-content {
   flex: 1;
+  padding: 0 20px;
 }
 
-
-
+/* Sections */
 .dash-section {
-  display: none; /* hide all sections initially */
+  display: none;
 }
 
 .dash-section.active {
-  display: block; /* show only the active section */
+  display: block;
+  margin-bottom: 40px;
 }
 
-
+/* ===== TOPICS/CARDS ===== */
 .course {
-  margin-bottom: 24px; /* space between courses */
+  background-color: #ffffff;
+  border-radius: 12px;
+  padding: 16px 20px;
+  margin-bottom: 24px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
 }
 
 .course h3 {
-  font-family: 'Poppins', sans-serif; /* headings use Poppins */
+  font-family: 'Poppins', sans-serif;
   font-weight: 600;
-  margin-bottom: 8px;
-  color: #27AE60; /* Ecominds success/progress green */
+  margin-bottom: 12px;
+  color: #1F2937;
 }
 
 .course p {
@@ -712,7 +771,7 @@ font-size: 28px; /* consistent with headers elsewhere */
   font-weight: 400;
   font-size: 14px;
   margin: 6px 0;
-  color: #6B7280;
+  color: #4B5563;
   line-height: 1.5;
 }
 
@@ -720,7 +779,19 @@ font-size: 28px; /* consistent with headers elsewhere */
   border: 0;
   height: 1px;
   background-color: #E5E7EB;
-  margin: 6px 0;
+  margin: 8px 0;
+}
+
+.course a {
+  color: #2e7d32; 
+  font-family: 'Nunito', sans-serif;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.course a:hover {
+  color: #1b5e20; 
+  text-decoration: underline;
 }
 
 
@@ -732,7 +803,7 @@ body {
     font-family: "Nunito", sans-serif;
     margin: 0; 
     min-height: 100vh;
-    background-color: #F7F9FB; /* matches your site bg */
+    background-color: #F7F9FB; 
 }
 
 .sign-up-wrapper {
@@ -965,6 +1036,10 @@ button {
     transform: translateY(-4px);
 }
 
+
+/* ===== TUTORING SECTION ===== */
+
+
 .tutoring_how img {
     width: 260px;
     height: 260px;
@@ -980,6 +1055,29 @@ button {
 .tutoring_how img:hover {
     transform: scale(1.03);
 }
+.how-step span {
+    display: inline-block;
+    width: 44px;
+    height: 44px;
+    line-height: 44px;
+    border-radius: 50%;
+    background: #9FC9B8;
+    color: white;
+    font-weight: 600;
+    margin-bottom: 14px;
+}
+
+.how-steps {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;
+    margin-top: 30px;
+}
+.how-step {
+    max-width: 260px;
+    text-align: center;
+}
 
 .tutoring_how p {
     font-size: 15px;
@@ -989,44 +1087,73 @@ button {
 }
 
 .tutoring_how strong {
-    color: #2E7D32;
+    color: #9FC9B8;
+    font-size: 17px;
+    display: block;
+    margin-bottom: 6px;
 }
+.tutoring_how h2 {
+    font-size: 32px;
+    color: #1F2937;
+    margin-bottom: 40px;
+}
+
+.tutoring_how {
+    max-width: 900px;
+    margin: 6rem auto 4rem auto; 
+    padding: 0 2rem;
+    text-align: center;
+}
+
+/* ===== ABOUT THE VOLUNTEERS SECTION ===== */
 
 
 .volunteer_profile{
     display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 40px;
     flex-direction: row;
-    margin:10rem;
+    margin:6rem auto 4rem auto;
     font-family: "Nunito", sans-serif;
 }
+.volunteer_profile h2 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 50px;
+    color: #1F2937; 
+    text-align: center;
+    margin-bottom: 50px;
+}
+
 .card {
-    width: 250px;               
+    width: 270px;               
     background-color: #ffffff;  
     border-radius: 15px;      
     box-shadow: 0 4px 8px rgba(0,0,0,0.2); 
     overflow: hidden;          
     text-align: center;         
     font-family: 'Poppins', sans-serif;
-    margin: 20px;              
+    margin: 0px;              
 }
 
 .card-img {
-    width: 10rem;
-    height: 10rem;
+    width: 120px;
+    height: 120px;
     border-radius: 50%;        
-    object-fit: cover;         
-    margin-top: 15px;
-}
+    object-fit: cover; 
+    margin: 20px auto 10px auto;        
+  }
 
 
 .card-details h2 {
     margin: 10px 0 5px 0;
-    font-size: 22px;
-    color: #6B7280;
+    font-size: 20px;
+    color: #1F2937;
     font-weight: 700;
 }
 
 .card-details p {
+    padding: 15px 20px;
     margin: 5px 0;
     font-size: 14px;
     color: #000000;

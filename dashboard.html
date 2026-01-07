@@ -54,105 +54,106 @@
 
 <!-- DASHBOARD TITLE -->
 <section class="dashboard-title">
-  <h1>Student Learning Dashboard</h1>
-  <p class="dashboard-caption">
-    Track progress, explore activities, and reach learning milestones
-  </p>
+  <div class="welcome-header">
+    <span class="profile-emoji">&#x1F324;</span>
+    <div class="welcome-text">
+      <h1>Welcome Back, Alex G!</h1>
+      <p class="dashboard-caption">Here’s your dashboard to track progress and explore topics</p>
+    </div>
+  </div>
 </section>
+
+
 
 <div class="dashboard-layout">
 
   <!-- SIDEBAR NAVIGATION -->
 <aside class="dashboard-sidebar">
-  <a href="#" onclick="showSection('courses'); return false;">Courses</a>
+  <a href="#" onclick="showSection('courses'); return false;">Topics</a>
 <a href="#" onclick="showSection('progress'); return false;">Progress</a>
 <a href="#" onclick="showSection('activities'); return false;">Activities</a>
 
 </aside>
 
 
-  <!-- MAIN CONTENT -->
-  <main class="dashboard-content">
+<!-- MAIN CONTENT -->
+<main class="dashboard-content">
 
-      <!-- COURSES -->
-  <section id="courses" class="dash-section ">
-    <h2>Courses</h2>
+  <!-- TOPICS -->
+  <section id="courses" class="dash-section active">
+    <h2>Topics</h2>
     <p>Explore available learning modules and lessons.</p>
 
+    <!-- Climate Science -->
     <div class="course">
       <h3>Climate Science</h3>
-      <p>Introduction to Climate Change</p>
+      <p><a href="https://www.youtube.com/watch?v=ffjIyms1BX4" target="_blank">Introduction to Climate Change (Video)</a></p>
       <hr>
-      <p>Greenhouse Gases</p>
+      <p><a href="https://www.epa.gov/ghgemissions/overview-greenhouse-gases" target="_blank">Greenhouse Gases (EPA)</a></p>
       <hr>
-      <p>Global Warming Effects</p>
+      <p><a href="https://climate.nasa.gov/news/2915/10-ways-to-reduce-carbon-footprint/" target="_blank">Global Warming & How to Help (NASA)</a></p>
       <hr>
-      <p>Mitigation Strategies</p>
+      <p><a href="https://www.epa.gov/climate-change/what-you-can-do-about-climate-change" target="_blank">What You Can Do About Climate Change (EPA)</a></p>
       <hr>
     </div>
 
+    <!-- Oceans & Marine Life -->
     <div class="course">
       <h3>Oceans & Marine Life</h3>
-      <p>Ocean Zones</p>
+      <p><a href="https://www.youtube.com/watch?v=sE8JYv_cKng" target="_blank">Ocean Zones & Life (Video)</a></p>
       <hr>
-      <p>Acidification</p>
+      <p><a href="https://www.noaa.gov/education/resource-collections/ocean-coasts/ocean-acidification" target="_blank">Ocean Acidification (NOAA)</a></p>
       <hr>
-      <p>Marine Biodiversity</p>
+      <p><a href="https://www.un.org/sustainabledevelopment/oceans/" target="_blank">Marine Biodiversity & Sustainable Oceans (UN SDG 14)</a></p>
       <hr>
-      <p>Human Impacts</p>
+      <p><a href="https://flowergarden.noaa.gov/protection/whatyoucando.html" target="_blank">Human Impacts & What You Can Do (NOAA)</a></p>
       <hr>
     </div>
 
+    <!-- Ecosystems & Biodiversity -->
     <div class="course">
       <h3>Ecosystems & Biodiversity</h3>
-      <p>Food Webs</p>
+      <p><a href="https://www.nationalgeographic.org/encyclopedia/food-web/" target="_blank">Food Webs Explained (National Geographic)</a></p>
       <hr>
-      <p>Endangered Species</p>
+      <p><a href="https://www.worldwildlife.org/threats/endangered-species" target="_blank">Endangered Species (WWF)</a></p>
       <hr>
-      <p>Keystone Species</p>
+      <p><a href="https://www.nationalgeographic.org/encyclopedia/keystone-species/" target="_blank">Keystone Species (NatGeo)</a></p>
       <hr>
-      <p>Conservation Efforts</p>
+      <p><a href="https://www.conservation.org/news" target="_blank">Conservation Efforts (Conservation.org)</a></p>
       <hr>
     </div>
 
+    <!-- Renewable Energy -->
     <div class="course">
       <h3>Renewable Energy</h3>
-      <p>Solar Power</p>
+      <p><a href="https://www.youtube.com/watch?v=1kUE0BZtTRc" target="_blank">How Solar Panels Work (Video)</a></p>
       <hr>
-      <p>Wind Power</p>
+      <p><a href="https://www.energy.gov/eere/wind/wind-energy-basics" target="_blank">Wind Power Basics (U.S. DOE)</a></p>
       <hr>
-      <p>Hydroelectric</p>
+      <p><a href="https://www.energy.gov/eere/water/hydropower-basics" target="_blank">Hydroelectric Power (DOE)</a></p>
       <hr>
-      <p>Comparisons & Benefits</p>
+      <p><a href="https://www.energy.gov/energysaver/renewable-energy" target="_blank">Renewable Energy Overview (DOE)</a></p>
       <hr>
     </div>
 
+    <!-- Environmental Policy -->
     <div class="course">
       <h3>Environmental Policy</h3>
-      <p>Global Agreements</p>
+      <p><a href="https://unfccc.int/process-and-meetings/the-convention/what-is-the-united-nations-framework-convention-on-climate-change" target="_blank">Global Agreements (UNFCCC)</a></p>
       <hr>
-      <p>National Policies</p>
+      <p><a href="https://www.epa.gov/environmental-topics/environmental-policy" target="_blank">National Policies (EPA)</a></p>
       <hr>
-      <p>Climate Justice</p>
+      <p><a href="https://thesolutionsproject.org/info/environmental-climate-justice/" target="_blank">Climate Justice Explained</a></p>
       <hr>
-      <p>Activism & Advocacy</p>
+      <p><a href="https://www.nationalgeographic.com/environment/article/how-to-climate-change-activist-questions-answered" target="_blank">Activism & Advocacy Guide (NatGeo)</a></p>
       <hr>
     </div>
-  </section>
 
-  <!-- PROGRESS -->
-  <section id="progress" class="dash-section">
-    <h2>Progress</h2>
-    <p>View completion status and learning growth.</p>
-  </section>
-
-  <!-- ACTIVITIES -->
-  <section id="activities" class="dash-section">
-    <h2>Activities</h2>
-    <p>Hands-on tasks and interactive learning experiences.</p>
   </section>
 
 </main>
+
+
 
  
 </div>
