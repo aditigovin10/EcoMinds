@@ -645,27 +645,27 @@
   font-family: 'Poppins', sans-serif;
   font-weight: 700;
   color: #1F2937;
-  margin-top: 80px;       /* space from nav bar */
-  margin-bottom: 40px;    /* space below header */
-  padding-left: 40px;     /* space from left edge */
+  margin-top: 80px;       
+  margin-bottom: 40px;    
+  padding-left: 40px;    
   padding-right: 20px;
 }
 
 .welcome-header {
-  display: flex;           /* emoji + text side by side */
-  align-items: flex-start; /* top-align emoji with header */
-  gap: 20px;               /* space between emoji and text */
+  display: flex;          
+  align-items: flex-start; 
+  gap: 20px;              
 }
 
 .profile-emoji {
-  font-size: 50px;         /* same size as header for mock profile */
+  font-size: 50px;        
   line-height: 1;
   flex-shrink: 0;
 }
 
 .welcome-text {
   display: flex;
-  flex-direction: column;  /* stack header and subtext vertically */
+  flex-direction: column;  
 }
 
 .welcome-text h1 {
@@ -674,7 +674,7 @@
   font-size: 48px;         
   color: #1F2937;
   text-align: left;
-  margin: 0 0 10px 0;      /* space below header */
+  margin: 0 0 10px 0;     
 }
 
 .welcome-text .dashboard-caption {
@@ -686,7 +686,7 @@
   margin: 0;   
 }
 
-/* optional real profile image placeholder */
+
 .profile-icon {
   width: 60px;
   height: 60px;
