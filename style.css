@@ -5,6 +5,20 @@
         }
 
         /* ===== NAVBAR ===== */
+
+.home-link {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+    color: inherit;
+}
+
+.home-link:hover {
+    padding-left: 0;
+    opacity: 0.9;
+}
+
         .navbar {
             background-color: #ffffff;
             padding: 16px 32px;
@@ -48,11 +62,15 @@
     position: relative;
 }
 
-/* Hover effect for normal links */
-.navbar a:hover {
-    opacity: 0.6;
-    padding-left: 6px; /* subtle interactive motion */
+.home-link:hover .site-name {
+    padding-left: 0;
 }
+
+.logo,
+.site-name {
+    cursor: pointer;
+}
+
 
 /* DROPDOWN MENU */
 .dropdown {
