@@ -38,6 +38,23 @@ function showSection(sectionId) {
 }
 
 
+//* DROPDOWN RESPONSIVENESS *//
+
+// Mobile dropdown toggle
+document.querySelectorAll('.dropbtn').forEach(btn => {
+  btn.addEventListener('click', e => {
+    e.stopPropagation();
+    const dropdown = btn.nextElementSibling;
+    dropdown.classList.toggle('show');
+  });
+});
+
+// Close dropdowns when tapping elsewhere
+document.addEventListener('click', () => {
+  document.querySelectorAll('.dropdown-content').forEach(menu => {
+    menu.classList.remove('show');
+  });
+});
 
 
 
