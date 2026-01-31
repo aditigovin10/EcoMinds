@@ -57,6 +57,39 @@ document.addEventListener('click', () => {
 });
 
 
+//* HOME PAGE SUB HEADING TRICK *//
+const changingText = document.querySelector('.changing-text');
+const words = changingText.dataset.words.split(',');
+let wordIndex = 0;
+let charIndex = 0;
+let deleting = false;
+
+function type() {
+    const currentWord = words[wordIndex].trim();
+    
+    if (!deleting) {
+        changingText.textContent = currentWord.slice(0, charIndex + 1);
+        charIndex++;
+        if (charIndex === currentWord.length) {
+            deleting = true;
+            setTimeout(type, 1000);
+            return;
+        }
+    } else {
+        changingText.textContent = currentWord.slice(0, charIndex - 1);
+        charIndex--;
+        if (charIndex === 0) {
+            deleting = false;
+            wordIndex = (wordIndex + 1) % words.length;
+        }
+    }
+    setTimeout(type, deleting ? 80 : 120);
+}
+
+type();
+
+
+
 
 
 

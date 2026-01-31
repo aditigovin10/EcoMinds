@@ -210,86 +210,122 @@
             background-position: 70% 84%;
         }
 
-        /* ===== HERO ===== */
-        .hero {
-            padding: 70px 10%;
-            display: flex;
-            align-items: center;
-            gap: 60px;
-        }
-        .hero-text h1 {
-            font-family: 'poppins', sans-serif;
-            font-size: 48px;
-            color: #1F2937;
-            margin-bottom: 20px;
-        }
 
-        .hero-text h2 {
-            font-family: 'poppins', sans-serif;
-            font-size: 48px;
-            color: #1F2937;
-            margin-bottom: 20px;
-        }
+/* ===== HERO SECTION ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
-        .hero-text p {
-            font-size: 18px;
-            font-family:"nunito", sans-serif;
-            max-width: 520px;
-            color:#6B7280
-        }
+body {
+    font-family: 'Nunito', sans-serif;
+    background-color: #F7F8F6;
+    color: #1F2937;
+    line-height: 1.6;
+}
 
-        /* ===== IMAGE STACK ===== */
-        .image-stack {
-            position: relative;
-            width: 340px;
-            height: 320px;
-            flex-shrink: 0;
-        }
+.hero-section {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start; 
+    min-height: 100vh;
+    text-align: center;
+    padding: 70px 20px 0; 
+    background: linear-gradient(135deg, #F7F8F6);
+    position: relative;
+    overflow: hidden;
+}
 
-        .image-stack img {
-            width: 220px;
-            height: 220px;
-            border-radius: 50%;
-            object-fit: cover;
-            position: absolute;
-            box-shadow: 0 10px 20px rgba(0,0,0,0.15);
-        }
 
-        .image-stack img:nth-child(1) {
-            top: 0;
-            left: 0;
-            z-index: 2;
-        }
+.hero-overlay h1 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 96px;
+    font-weight: 800;
+    color: #242E3C;
+    margin-bottom: 10px; /* was 20 */
+}
 
-        .image-stack img:nth-child(2) {
-            top: 100px;
-            left: 120px;
-            z-index: 1;
-        }
+.hero-overlay h2 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 28px;
+    font-weight: 500;
+    color: #5F7978;
+    margin-bottom: 28px; /* was 40 */
+}
+
+
+.changing-text {
+    font-weight: 700;
+    color: #1F2937;
+    border-right: 2px solid #1F2937;
+    padding-right: 5px;
+}
+
+/* ===== BUTTON ===== */
+.learn-more-btn {
+    background-color: #9FC9B8;
+    color: #F7F8F6;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    padding: 16px 36px;
+    border-radius: 999px;
+    text-decoration: none;
+    box-shadow: 0 8px 20px rgba(31,41,55,0.1);
+    transition: all 0.3s ease;
+    margin-top: 24px;
+    display: inline-block;
+}
+
+.learn-more-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 12px 28px rgba(31,41,55,0.15);
+    background-color: #5F7978;
+}
+
+/* ===== CALL-TO-ACTION ===== */
+.cta-section {
+    text-align: center;
+    padding: 80px 10%;
+    background-color: #F7F8F6;
+    margin-top: 120px; /* moved up */
+}
+
+
+.cta-section h2 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 44px;
+    margin-bottom: 16px;
+}
+
+.cta-section p {
+    font-family: 'Nunito', sans-serif;
+    font-size: 18px;
+    color: #5F7978;
+    margin-bottom: 24px;
+}
 
 .volunteer-btn {
     display: inline-block;
     margin-top: 24px;
-
-    background-color: #1F2937; 
-    color: #ffffff;
+    background-color: #9FC9B8;
+    color: #F7F8F6;
     font-family: 'Poppins', sans-serif;
     font-size: 16px;
     font-weight: 600;
-
     padding: 14px 28px;
-    border-radius: 999px; 
+    border-radius: 999px;
     text-decoration: none;
-
-    box-shadow: 0 8px 20px rgba(31, 41, 55, 0.25);
-    transition: all 0.25s ease;
+    box-shadow: 0 8px 20px rgba(36,46,60,0.15);
 }
 
 .volunteer-btn:hover {
     transform: translateY(-3px);
-    box-shadow: 0 12px 28px rgba(31, 41, 55, 0.35);
-    background-color: #111827; /* slightly darker navy */
+    box-shadow: 0 12px 28px rgba(36,46,60,0.25);
+    background-color: #5F7978;
 }
+
+
 
  /* Schedule Page- STYLE */
 .schedule-page {
@@ -313,13 +349,13 @@
 
 /* ===== OCEAN BACKGROUND ===== */
 .ocean-bg {
-  position: fixed; /* stays in the background and fills viewport */
+  position: fixed; 
   top: 0;
   left: 0;
   width: 100vw;
-  height: 100vh; /* full viewport height */
+  height: 100vh; 
   background-image: url("images/ocean-bg.gif");
-  background-size: cover; /* fills entire area without repeating */
+  background-size: cover; 
   background-position: center center;
   opacity: 0.52;
   filter: saturate(1.25) brightness(1.05);
