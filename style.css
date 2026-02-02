@@ -32,14 +32,14 @@
         .nav-right {
         display: flex;
         align-items: center;
-        gap: 28px; /* spacing between each top-level link or dropdown */
+        gap: 28px; 
         }
 .nav-right > *:not(:last-child) {
-    margin-right: 12px; /* spacing between links except the last one */
+    margin-right: 12px; 
 }
 
 .nav-right .dropdown + .dropdown {
-    margin-right: 28px; /* extra spacing just between dropdowns */
+    margin-right: 28px; 
 }
 
 
@@ -50,7 +50,7 @@
             gap: 5px;
         }
 
-        /* General navbar link style */
+        
         
 .navbar a {
     font-family: 'Nunito', sans-serif;
@@ -71,14 +71,18 @@
     cursor: pointer;
 }
 
+.nav-right a:hover {
+    opacity: 0.6;
+}
 
-/* DROPDOWN MENU */
+
+
 .dropdown {
     position: relative;
     display: inline-block;
 }
 
-/* Category label (not clickable) */
+
 .dropbtn {
     font-family: 'Nunito', sans-serif;
     font-weight: 600;
@@ -89,13 +93,13 @@
     transition: opacity 0.2s ease, padding-left 0.2s ease;
 }
 
-/* Hover effect for category label */
+
 .dropbtn:hover {
     opacity: 0.6;
     padding-left: 6px;
 }
 
-/* Dropdown panel */
+
 .dropdown-content {
     display: none;
     position: absolute;
@@ -229,9 +233,9 @@ body {
     display: flex;
     justify-content: center;
     align-items: flex-start; 
-    min-height: 100vh;
+    min-height: 15vh;
     text-align: center;
-    padding: 70px 20px 0; 
+    padding: 40px 20px 0; 
     background: linear-gradient(135deg, #F7F8F6);
     position: relative;
     overflow: hidden;
@@ -274,6 +278,7 @@ body {
     box-shadow: 0 8px 20px rgba(31,41,55,0.1);
     transition: all 0.3s ease;
     margin-top: 24px;
+    margin-bottom: 100px;
     display: inline-block;
 }
 
@@ -282,6 +287,24 @@ body {
     box-shadow: 0 12px 28px rgba(31,41,55,0.15);
     background-color: #5F7978;
 }
+
+/* ===== GRAPHIC SECTION ===== */
+.graphic-section {
+    display: flex;
+    justify-content: top;
+    align-items: center;
+    padding: 40px 0 ;
+    margin-bottom: 90px;
+    margin-top: 0px;
+    background-color: #F7F8F6;
+}
+
+.graphic-section img {
+    max-width: 100%;
+    width: 1900px;  
+    height: auto;
+}
+
 
 /* ===== CALL-TO-ACTION ===== */
 .cta-section {
