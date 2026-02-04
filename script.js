@@ -3,27 +3,39 @@
 
 
 //* Quiz Score Messages - Resources *//
-
 function checkQuiz(formId, resultId) {
   let score = 0;
   const total = 4;
 
   const form = document.getElementById(formId);
 
-  for(let i=1; i<=total; i++) {
+  for (let i = 1; i <= total; i++) {
     const selected = form.querySelector(`input[name="q${i}"]:checked`);
-    if(selected) score += Number(selected.value);
+    if (selected) score += Number(selected.value);
   }
 
   let message = "";
-  if(score === 4) message = "\u{1F30D} Excellent! You got all correct!";
-  else if(score === 3) message = "\u{1F331} Great job! Most key ideas understood!";
-  else if(score === 2) message = "\u{1F30A} Not bad! Review and try again!";
-  else if(score === 1) message = "\u{1F4D8} Keep learning!";
-  else if(score === 0) message = "\u26A0\uFE0F Oh no! None correct, try again!";
+  if (score === 4) message = "\u{1F30D} Excellent! You got all correct!";
+  else if (score === 3) message = "\u{1F331} Great job! Most key ideas understood!";
+  else if (score === 2) message = "\u{1F30A} Not bad! Review and try again!";
+  else if (score === 1) message = "\u{1F4D8} Keep learning!";
+  else if (score === 0) message = "\u{26A0}\u{FE0F} Oh no! None correct, try again!";
 
   document.getElementById(resultId).innerHTML = `<strong>Score:</strong> ${score}/${total}<br>${message}`;
 }
+
+// ===== QUIZ TOGGLE FUNCTION =====
+document.addEventListener("DOMContentLoaded", () => {
+  document.querySelectorAll('.quiz-toggle').forEach(button => {
+    button.addEventListener('click', () => {
+      const quizSection = button.nextElementSibling; 
+      quizSection.classList.toggle('hidden');       
+    });
+  });
+});
+
+
+
 
 //* DASHBOARD JS *//
 
@@ -59,12 +71,17 @@ document.addEventListener('click', () => {
 
 //* HOME PAGE SUB HEADING TRICK *//
 const changingText = document.querySelector('.changing-text');
-const words = changingText.dataset.words.split(',');
+let words = '';
+
+if (changingText!=null){
+   words = changingText.dataset.words.split(',');
+}
 let wordIndex = 0;
 let charIndex = 0;
 let deleting = false;
 
 function type() {
+    if(!words.length) return;
     const currentWord = words[wordIndex].trim();
     
     if (!deleting) {
