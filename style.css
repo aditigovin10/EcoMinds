@@ -422,16 +422,36 @@ body {
 }
 
 /* ===== CARD GRID ===== */
+
+
+
+/* Container for all cards */
 .schedule-cards {
-  display: flex;
-  flex:row;
-  width:100%;
-  padding-bottom: 50px;
-  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-  gap: 28px;
-  position: relative;
-  z-index: 1; 
-  margin-top: 60px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+/* Individual card */
+.schedule-card {
+  background: white;
+  border-radius: 12px;
+  padding: 16px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  font-family: Arial, sans-serif;
+}
+
+/* Text styling */
+.schedule-card h3 {
+  font-size: 1.1rem;
+  margin-bottom: 8px;
+}
+
+.schedule-card p {
+  margin: 4px 0;
+  color: #444;
 }
 
 /* ===== FLOATING CARD STYLE ===== */
@@ -1541,7 +1561,7 @@ button {
 
 /* PHONE RESPONSIVENESS */
 
-@media (max-width: 768px) {
+@media (max-width: 600px) {
 
   /* NAVBAR */
   .navbar {
@@ -1606,11 +1626,37 @@ button {
   .dashboard-content {
     padding: 16px;
   }
+  .clearfix {
+     width: 80%
+
+  }
+   .volunteer-application {
+    width: 90%;
+   }
+
+   .schedule-cards {
+    grid-template-columns: 1fr;
+  }
+
+  .schedule-card {
+    padding: 14px;
+  }
+
+  .schedule-card h3 {
+    font-size: 1rem;
+  }
+
+  .schedule-card p {
+    font-size: 0.95rem;
+  }
+  
+
+   
 
 }
 
 
-/* TABLET RESPONSIVNESS */
+/* TABLET RESPONSIVNESS (Portrait + Landscape) */
 
 @media (min-width: 769px) and (max-width: 1024px) {
 
@@ -1631,6 +1677,8 @@ button {
   .dashboard-title h1 {
     font-size: 28px;
   }
+  .schedule-cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
 
 }
-

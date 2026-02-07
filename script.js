@@ -1,7 +1,5 @@
 // script.js
 
-
-
 //* Quiz Score Messages - Resources *//
 function checkQuiz(formId, resultId) {
   let score = 0;
@@ -33,10 +31,6 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 });
-
-
-
-
 //* DASHBOARD JS *//
 
 function showSection(sectionId) {
@@ -48,7 +42,6 @@ function showSection(sectionId) {
   // show the clicked section
   document.getElementById(sectionId).classList.add('active');
 }
-
 
 //* DROPDOWN RESPONSIVENESS *//
 
