@@ -5,7 +5,100 @@ body {
             background: linear-gradient(135deg, #F7F8F6);
         }
 
-        /* ===== NAVBAR ===== */
+
+/* NAVBAR  ADDED */
+.navbar {
+  background: white;
+  padding: 16px 28px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #E5E7EB;
+  position: relative;
+  min-height: 80px;
+}
+
+.nav-left {
+  display: flex;
+  align-items: center;
+}
+
+.nav-right {
+  display: flex;
+  gap: 28px;
+  align-items: center;
+}
+
+/* Hamburger hidden on desktop */
+.menu-toggle {
+  display: none;
+  font-size: 28px;
+  cursor: pointer;
+}
+
+/* Dropdown */
+.dropdown {
+  position: relative;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 6px 16px rgba(0,0,0,0.1);
+  padding: 8px 0;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.dropdown-content a {
+  display: block;
+  padding: 10px 16px;
+  text-decoration: none;
+  color: #1F2937;
+}
+
+/* =========================
+   MOBILE + TABLET
+   ========================= */
+@media (max-width: 900px) {
+
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .menu-toggle {
+    display: block;
+    align-self: flex-end;
+    margin-top: -40px;
+  }
+
+  .nav-right {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    gap: 16px;
+    margin-top: 16px;
+  }
+
+  .nav-right.show {
+    display: flex;
+  }
+
+  .dropdown-content {
+    position: static;
+    box-shadow: none;
+    padding-left: 12px;
+  }
+}
+
+
+/*
+        /* ===== NAVBAR OLD===== */
 
 .home-link {
     display: flex;
@@ -19,6 +112,8 @@ body {
     padding-left: 0;
     opacity: 0.9;
 }
+
+/* NAVBAR 
 
         .navbar {
             background-color: #ffffff;
@@ -47,7 +142,7 @@ body {
             align-items: center;
             gap: 5px;
         }
-
+ */
         
         
 .navbar a {
@@ -231,7 +326,7 @@ body {
 
 .hero-overlay h1 {
     font-family: 'Poppins', sans-serif;
-    font-size: 96px;
+    font-size: 66px;
     font-weight: 800;
     color: #242E3C;
     margin-bottom: 10px; /* was 20 */
@@ -1078,6 +1173,7 @@ button {
     background-color: #5F7978; 
     color: #ffffff;
     margin-right: 5px;
+    
 }
 
 .signupbtn:hover {
@@ -1094,21 +1190,23 @@ button {
     background-color: #7ea998; 
 }
 
-/* Buttons side by side */
+/* Buttons side by side 
 .cancelbtn, .signupbtn {
     float: left;
     width: 100%; 
-}
+}*/
 
 /* Container padding */
 .container {
-    padding: 0 16px;
+    padding: 0 15px;
     font-family: "poppins", sans-serif;
 }
 .clearfix {
     margin-top: 24px; 
     display: flex;
     gap: 12px;
+    justify-content: center; /* center buttons horizontally */  
+    flex-wrap: nowrap; /* allow wrapping on small screens */
 }
 
 /* Clear floats */
@@ -1120,10 +1218,9 @@ button {
 
 /* Responsive */
 @media screen and (max-width: 500px) {
-    .cancelbtn, .signupbtn {
-        width: 100%;
-        float: none;
-        margin: 5px 0;
+    .cancelbtn, .signupbtn {        
+        width: 78%; /* side by side on larger screens */
+       float: none; /* remove float */
     }
 }
 
@@ -1220,13 +1317,13 @@ button {
 
 /* Tutoring How & FAQ STYLE */
 
-
-.tutoring_how h2,
 .faq-section h2 {
     font-family: 'Poppins', sans-serif;
     font-size: 32px;
     color: #1F2937; 
-    margin-bottom: 40px;
+    margin-top: -150px;    /* space above the heading */
+    margin-bottom: 40px; /* space below the heading */
+    text-align: center;  /* optional, centers the heading */
 }
 
 /* ===== FAQ SECTION ===== */
@@ -1273,6 +1370,12 @@ button {
 
 /* ===== TUTORING SECTION ===== */
 
+.tutoring_how h2 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 32px;
+    color: #1F2937; 
+    margin-bottom: 40px;
+}
 
 .tutoring_how img {
     width: 260px;
@@ -1338,6 +1441,86 @@ button {
     padding: 0 2rem;
     text-align: center;
 }
+
+/* subtitle text */
+.how-sub {
+    max-width: 520px;
+    margin: -10px auto 10px auto;
+    color: #6B7280;
+    font-size: 16px;
+}
+
+/* shy reassurance line */
+.how-shy {
+    font-size: 14px;
+    color: #6B7280;
+    margin-bottom: 25px;
+}
+
+/* step hover card effect */
+.how-step {
+    max-width: 260px;
+    text-align: center;
+    padding: 18px 16px;
+    border-radius: 18px;
+    transition: all 0.25s ease;
+}
+
+.how-step:hover {
+    background: #F4FAF7;
+    transform: translateY(-4px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+}
+
+/* animate number bubble */
+.how-step span {
+    transition: transform 0.25s ease, background 0.25s ease;
+}
+
+.how-step:hover span {
+    transform: scale(1.12);
+    background: #7FB7A0;
+}
+
+/* smaller helper text */
+.how-step small {
+    display: block;
+    margin-top: 6px;
+    font-size: 13px;
+    color: #6B7280;
+}
+
+/* preparation box */
+.how-prepare {
+    background: #F7FBF9;
+    border-radius: 18px;
+    padding: 22px 28px;
+    max-width: 420px;
+    margin: 40px auto 20px auto;
+    text-align: left;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.06);
+}
+
+.how-prepare h3 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 18px;
+    margin-bottom: 12px;
+    color: #1F2937;
+}
+
+.how-prepare ul {
+    padding-left: 18px;
+    color: #374151;
+    line-height: 1.7;
+}
+
+/* safety line */
+.how-safe {
+    font-size: 13px;
+    color: #6B7280;
+    margin-top: 20px;
+}
+
 
 /* ===== ABOUT THE VOLUNTEERS SECTION ===== */
 
@@ -1532,6 +1715,7 @@ button {
   display: flex;
   gap: 4%;
   justify-content: space-between;
+  flex-wrap: nowrap; /* keep them in one row */
 }
 
 /* Individual Buttons */
@@ -1548,16 +1732,18 @@ button {
     display: table;
 }
 
-/* Responsive adjustments */
+
 @media screen and (max-width: 500px) {
-    .volunteer-application .cancelbtn,
-    .volunteer-application .signupbtn {
-        width: 100%;
-        float: none;
-        margin: 5px 0;
+    .volunteer-application .clearfix {
+        justify-content: center; /* center the buttons */
+        gap: 10px; /* space between stacked buttons */
+    }
+
+    .volunteer-application button {
+        width: 100%; /* full width on small screens */
+        min-width: auto; /* remove minimum width to avoid overlap */
     }
 }
-
 
 /* PHONE RESPONSIVENESS */
 
@@ -1630,10 +1816,13 @@ button {
      width: 80%
 
   }
-   .volunteer-application {
-    width: 90%;
-   }
-
+  /* signup code added */
+.sign-up {
+    width: 100%;
+    margin: 2rem auto;
+    padding: 1.5rem;
+  }
+ 
    .schedule-cards {
     grid-template-columns: 1fr;
   }
@@ -1648,14 +1837,22 @@ button {
 
   .schedule-card p {
     font-size: 0.95rem;
-  }
-  
+  }  
 
-   
-
+  .volunteer-application {
+    width: 80%;
 }
 
+ .volunteer-application .clearfix {
+        justify-content: center; /* center the buttons */
+        gap: 10px; /* space between stacked buttons */
+    }
 
+    .volunteer-application button {
+        width: 100%; /* full width on small screens */
+        min-width: auto; /* remove minimum width to avoid overlap */
+    }
+  }
 /* TABLET RESPONSIVNESS (Portrait + Landscape) */
 
 @media (min-width: 769px) and (max-width: 1024px) {
@@ -1680,5 +1877,28 @@ button {
   .schedule-cards {
     grid-template-columns: repeat(2, 1fr);
   }
+  .clearfix{
+    display: flex;            /* Makes children align horizontally */
+    justify-content: center;  /* Centers buttons horizontally inside the div */
+    gap: 1rem;                /* Adds space between the buttons */
+    margin-top: 1rem;
+    flex-wrap: nowrap; 
+    }
+  .button {
+    padding: 0.5rem 1.5rem;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    min-width: 120px;
+   }
 
+    .volunteer-application .clearfix {
+        justify-content: center; /* center the buttons */
+        gap: 10px; /* space between stacked buttons */
+    }
+
+    .volunteer-application button {
+        width: 100%; /* full width on small screens */
+        min-width: auto; /* remove minimum width to avoid overlap */
+    }
 }

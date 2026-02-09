@@ -12,46 +12,46 @@
 </head>
 
 <body>
-
-   <!-- NAVBAR -->    
-    <div class="navbar">
-
-   <div class="nav-left">
+<!-- NAVBAR ADDED-->
+<div class="navbar">
+  <div class="nav-left">
     <a href="index.html" class="home-link">
-        <img src="images/Logo.png" alt="EcoMinds Logo" class="logo">
-
-        <div class="site-text">
-            <div class="site-name">EcoMinds</div>
-            <div class="motto">Built by students, powered by the environment.</div>
-        </div>
+      <img src="images/Logo.png" alt="EcoMinds Logo" class="logo">
+      <div class="site-text">
+        <div class="site-name">EcoMinds</div>
+        <div class="motto">Built by students, powered by the environment.</div>
+      </div>
     </a>
-</div>
+  </div>
 
-    <div class="nav-right">
-        <div class="dropdown">
-             <span class="dropbtn">Live Tutoring</span>
-            <div class="dropdown-content">
-                <a href="schedule.html">Schedule</a>
-                <a href="how-it-works.html">How It Works</a>
-                <a href="about-our-volunteers.html">About Our Volunteers</a>
-                <a href="volunteer-application.html">Volunteer Application</a>
-            </div>
-        </div>
+  <!-- Hamburger ADDED-->
+  <div class="menu-toggle" onclick="toggleMenu()">☰</div>
 
-        <div class="dropdown">
-            <span class="dropbtn">Resources</span>
-            <div class="dropdown-content">
-                <a href="articles.html">Articles</a>
-                <a href="videos.html">Videos</a>
-                <a href="quizzes.html">Quizzes</a>
-            </div>
-        </div>
-
-        <a href="dashboard.html">Dashboard</a>
-        <a href="signup.html" class="signup">Sign Up</a>
+  <!-- Navigation Links -->
+  <div class="nav-right" id="navMenu">
+    <div class="dropdown">
+      <span class="dropbtn">Live Tutoring</span>
+      <div class="dropdown-content">
+        <a href="schedule.html">Schedule</a>
+        <a href="how-it-works.html">How It Works</a>
+        <a href="about-our-volunteers.html">About Our Volunteers</a>
+        <a href="volunteer-application.html">Volunteer Application</a>
+      </div>
     </div>
-</div>
 
+    <div class="dropdown">
+      <span class="dropbtn">Resources</span>
+      <div class="dropdown-content">
+        <a href="articles.html">Articles</a>
+        <a href="videos.html">Videos</a>
+        <a href="quizzes.html">Quizzes</a>
+      </div>
+    </div>
+
+    <a href="dashboard.html">Dashboard</a>
+    <a href="signup.html" class="signup">Sign Up</a>
+  </div>
+</div>   
 
 
 <!-- DONT DISTURB ANYTHING ABOVE THIS LINE-->     
@@ -60,54 +60,58 @@
     <img src="images/onlinetutoring.jpg" alt="Online tutoring" class="tutoring-img">
 
     <h2>How Live Tutoring Works</h2>
+    <p class="how-sub">
+        No scheduling, no pressure — just join, ask questions, and leave whenever you want.
+    </p>
+
+    <p class="how-shy">
+        Nervous to talk? You can type questions in chat — many students do!
+    </p>
 
     <div class="how-steps">
         <div class="how-step">
             <span>1</span>
             <p><strong>Pick a Topic</strong><br>
-            Weathering, fossil fuels, ecosystems, renewable energy, and more.</p>
+            Weathering, fossil fuels, ecosystems, renewable energy, and more.<br>
+            <small>Choose what you're currently learning in class.</small></p>
         </div>
 
         <div class="how-step">
             <span>2</span>
             <p><strong>Join a Peer Session</strong><br>
-            Get help from trained high school tutors.</p>
+            Get help from trained high school tutors.<br>
+            <small>You can keep camera off and just use chat if you prefer.</small></p>
         </div>
 
         <div class="how-step">
             <span>3</span>
             <p><strong>Learn & Track Progress</strong><br>
-            Review notes or mini quizzes to reinforce learning.</p>
+            Review notes or mini quizzes to reinforce learning.<br>
+            <small>Everything stays saved so you can come back later.</small></p>
         </div>
     </div>
+
+    <div class="how-prepare">
+        <h3>Before you join</h3>
+        <ul>
+            <li>Have your homework or question ready</li>
+            <li>Bring a notebook or open a doc</li>
+            <li>Join the Zoom link</li>
+        </ul>
+    </div>
+
+    <p class="how-safe">
+        All sessions are moderated and focused only on school learning.
+    </p>
 </div>
 
-<div class="faq-section">
-    <h2>Frequently Asked Questions</h2>
 
-    <div class="faq-card">
-        <h3>Who can use EcoMinds tutoring?</h3>
-        <p>Our live tutoring is designed for middle and high school students interested in climate and environmental science.</p>
-    </div>
 
-    <div class="faq-card">
-        <h3>Who are the tutors?</h3>
-        <p>Tutors are trained high school students who have already studied these topics and want to help others learn.</p>
-    </div>
-
-    <div class="faq-card">
-        <h3>Is this free?</h3>
-        <p>Yes! EcoMinds tutoring is completely free and community-driven.</p>
-    </div>
-
-    <div class="faq-card">
-        <h3>What subjects are covered?</h3>
-        <p>We cover climate science, ecosystems, renewable energy, fossil fuels, weathering, and more.</p>
-    </div>
-</div>
-
+<script>
+function toggleMenu() {
+  document.getElementById("navMenu").classList.toggle("show");
+}
+</script>
 <script src="script.js"></script>
-
-
 </body>
 </html>

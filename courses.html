@@ -13,46 +13,46 @@
 
 <body>
 
-    <!-- NAVBAR -->    
-    <div class="navbar">
-
+   <!-- NAVBAR ADDED-->
+<div class="navbar">
   <div class="nav-left">
     <a href="index.html" class="home-link">
-        <img src="images/Logo.png" alt="EcoMinds Logo" class="logo">
-
-        <div class="site-text">
-            <div class="site-name">EcoMinds</div>
-            <div class="motto">Built by students, powered by the environment.</div>
-        </div>
+      <img src="images/Logo.png" alt="EcoMinds Logo" class="logo">
+      <div class="site-text">
+        <div class="site-name">EcoMinds</div>
+        <div class="motto">Built by students, powered by the environment.</div>
+      </div>
     </a>
-</div>
+  </div>
 
-    <div class="nav-right">
-        <div class="dropdown">
-             <span class="dropbtn">Live Tutoring</span>
-            <div class="dropdown-content">
-                <a href="schedule.html">Schedule</a>
-                <a href="how-it-works.html">How It Works</a>
-                <a href="about-our-volunteers.html">About Our Volunteers</a>
-                <a href="volunteer-application.html">Volunteer Application</a>
-            </div>
-        </div>
+  <!-- Hamburger ADDED-->
+  <div class="menu-toggle" onclick="toggleMenu()">☰</div>
 
-        <div class="dropdown">
-            <span class="dropbtn">Resources</span>
-            <div class="dropdown-content">
-                <a href="articles.html">Articles</a>
-                <a href="videos.html">Videos</a>
-                <a href="quizzes.html">Quizzes</a>
-            </div>
-        </div>
-
-        <a href="dashboard.html">Dashboard</a>
-        <a href="signup.html" class="signup">Sign Up</a>
+  <!-- Navigation Links -->
+  <div class="nav-right" id="navMenu">
+    <div class="dropdown">
+      <span class="dropbtn">Live Tutoring</span>
+      <div class="dropdown-content">
+        <a href="schedule.html">Schedule</a>
+        <a href="how-it-works.html">How It Works</a>
+        <a href="about-our-volunteers.html">About Our Volunteers</a>
+        <a href="volunteer-application.html">Volunteer Application</a>
+      </div>
     </div>
-</div>
 
+    <div class="dropdown">
+      <span class="dropbtn">Resources</span>
+      <div class="dropdown-content">
+        <a href="articles.html">Articles</a>
+        <a href="videos.html">Videos</a>
+        <a href="quizzes.html">Quizzes</a>
+      </div>
+    </div>
 
+    <a href="dashboard.html">Dashboard</a>
+    <a href="signup.html" class="signup">Sign Up</a>
+  </div>
+</div>   
 
 <!-- DONT DISTURB ANYTHING ABOVE THIS LINE-->     
 
@@ -152,10 +152,11 @@
 
     </main>
   </div>
-
+  <script>
+function toggleMenu() {
+  document.getElementById("navMenu").classList.toggle("show");
+}
+</script>
   <script src="script.js"></script>
-
-
-
 </body>
 </html>
