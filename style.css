@@ -297,7 +297,7 @@ body {
             position: relative;
             font-weight: 600;
             padding: 26px 34px;
-            background-image: url("images/Scribble.png");
+            background-image: url("images/Scribble.gif");
             background-size: 95% 110%;
             background-repeat: no-repeat;
             background-position: 70% 84%;
@@ -699,6 +699,108 @@ body {
     color: #6B7280;
 }
 
+/* ==== Mini animations for article cards ==== */
+/* Make card relative for corner animations */
+.article-card {
+  position: relative;
+}
+
+/* Base pseudo-element: hidden by default */
+.article-card::after {
+  content: "";
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  font-size: 28px; /* bigger emojis */
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+/* ==== Hover-triggered animations ==== */
+
+/* Climate Change: pulsing sun 🌞 */
+.article-card.climate-change:hover::after {
+  content: "🌞";
+  animation: pulse 1s infinite alternate;
+  opacity: 1;
+}
+
+/* Ocean Acidification: rising bubbles 🫧 */
+.article-card.ocean-acidification:hover::after {
+  content: "🫧";
+  animation: rise 2s infinite linear;
+  opacity: 1;
+}
+
+/* Biodiversity: jumping frog 🐸 */
+.article-card.biodiversity:hover::after {
+  content: "🐸";
+  animation: jump 1.2s infinite alternate;
+  opacity: 1;
+}
+
+/* Renewable Energy: spinning wind 💨 */
+.article-card.renewable-energy:hover::after {
+  content: "💨";
+  animation: spin 1.2s infinite linear;
+  opacity: 1;
+}
+
+/* Environmental Justice: fist pump ✊ */
+.article-card.environmental-justice:hover::after {
+  content: "✊";
+  animation: fistPump 0.6s infinite alternate;
+  opacity: 1;
+}
+
+/* Sustainability: spinning globe 🌍 */
+.article-card.sustainability:hover::after {
+  content: "🌍";
+  animation: spin 2s infinite linear;
+  opacity: 1;
+}
+
+/* ==== Keyframes ==== */
+
+/* Pulsing scale */
+@keyframes pulse {
+  0% { transform: scale(1); }
+  100% { transform: scale(1.6); } /* bigger pulse */
+}
+
+/* Rising bubble */
+@keyframes rise {
+  0% { transform: translateY(0); opacity: 0.6; }
+  50% { opacity: 1; }
+  100% { transform: translateY(-30px); opacity: 0; } /* rise higher */
+}
+
+/* Jumping emoji */
+@keyframes jump {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-15px); } /* higher jump */
+  100% { transform: translateY(0); }
+}
+
+/* Spinning emoji */
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Fist pump keyframes */
+@keyframes fistPump {
+  0% { 
+    transform: translateY(0) scale(1); 
+  }
+  50% { 
+    transform: translateY(-10px) scale(1.2); /* move up and slightly bigger */
+  }
+  100% { 
+    transform: translateY(0) scale(1); 
+  }
+}
 
 
 /*==== VIDEOS-RESOURCES STYLE ==== */
